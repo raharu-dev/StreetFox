@@ -1,0 +1,146 @@
+/* StreetFox settings widgets — shared by the in-page panel and the options page. */
+
+.streetfox-settings {
+  font-family: Roboto, Arial, sans-serif;
+  color: #202124;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.streetfox-settings .sf-row {
+  padding: 8px 16px;
+}
+
+.streetfox-settings .sf-row + .sf-row {
+  border-top: 1px solid #f1f3f4;
+}
+
+.streetfox-settings .sf-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.streetfox-settings .sf-hint {
+  color: #5f6368;
+  font-size: 11.5px;
+  margin-top: 6px;
+}
+
+.streetfox-settings select,
+.streetfox-settings input[type="text"] {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+.streetfox-settings select:focus,
+.streetfox-settings input[type="text"]:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 1px #1a73e8;
+}
+
+.streetfox-settings .sf-check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.streetfox-settings .sf-check input {
+  flex: none;
+  margin-top: 3px;
+  width: 15px;
+  height: 15px;
+  accent-color: #1a73e8;
+  cursor: pointer;
+}
+
+.streetfox-settings .sf-seg {
+  display: inline-flex;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.streetfox-settings .sf-seg button {
+  padding: 6px 14px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: #5f6368;
+}
+
+.streetfox-settings .sf-seg button + button {
+  border-left: 1px solid #dadce0;
+}
+
+.streetfox-settings .sf-seg button.sf-on {
+  background: #e8f0fe;
+  color: #1967d2;
+  font-weight: 600;
+}
+
+.streetfox-settings input[type="range"] {
+  width: 100%;
+  accent-color: #1a73e8;
+}
+
+.streetfox-settings .sf-quality-val {
+  font-weight: 400;
+  color: #5f6368;
+  font-variant-numeric: tabular-nums;
+}
+
+.streetfox-settings .sf-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.streetfox-settings .sf-chip {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  background: #f1f3f4;
+  color: #3c4043;
+  cursor: pointer;
+  border: none;
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+.streetfox-settings .sf-chip:hover {
+  background: #e3e5e7;
+}
+
+.streetfox-settings .sf-preview {
+  margin-top: 8px;
+  font-size: 11.5px;
+  color: #5f6368;
+  word-break: break-all;
+}
+
+.streetfox-settings .sf-preview::before {
+  content: "→ ";
+}
+
+.streetfox-settings .sf-saved {
+  color: #1e8e3e;
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.streetfox-settings .sf-saved.sf-show {
+  opacity: 1;
+}

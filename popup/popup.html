@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon.svg" width="26" height="26" alt="">
+    <b>StreetFox</b>
+  </header>
+
+  <div id="pano-info" class="muted">Checking for Street View…</div>
+
+  <button id="dl" class="primary" disabled>Download 360°</button>
+
+  <div id="bar" class="bar" hidden><div id="bar-fill"></div></div>
+  <div id="status" class="muted small" hidden></div>
+
+  <div class="row">
+    <button id="open-settings" class="link">Settings</button>
+  </div>
+
+  <script src="../shared/config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

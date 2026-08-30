@@ -1,0 +1,79 @@
+{
+  "manifest_version": 2,
+  "name": "StreetFox — Street View 360° Downloader",
+  "version": "1.0.0",
+  "description": "Adds a button to Google Street View that downloads the current panorama as a real 360° photo. No API keys.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "streetfox@raharu.addons",
+      "strict_min_version": "115.0"
+    }
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg",
+    "128": "icons/icon.svg"
+  },
+  "background": {
+    "scripts": [
+      "shared/config.js",
+      "shared/xmp.js",
+      "background/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/maps*",
+        "*://*.google.co.uk/maps*",
+        "*://*.google.de/maps*",
+        "*://*.google.fr/maps*",
+        "*://*.google.es/maps*",
+        "*://*.google.it/maps*",
+        "*://*.google.ca/maps*",
+        "*://*.google.com.au/maps*",
+        "*://*.google.nl/maps*",
+        "*://*.google.pl/maps*",
+        "*://*.google.com.br/maps*",
+        "*://*.google.co.jp/maps*"
+      ],
+      "js": [
+        "shared/config.js",
+        "shared/settings-panel.js",
+        "content/content.js"
+      ],
+      "css": [
+        "shared/settings.css",
+        "content/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "browser_action": {
+    "default_title": "StreetFox — download this Street View panorama",
+    "default_icon": "icons/icon.svg",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "webRequest",
+    "downloads",
+    "storage",
+    "*://*.google.com/*",
+    "*://streetviewpixels-pa.googleapis.com/*",
+    "*://*.google.co.uk/*",
+    "*://*.google.de/*",
+    "*://*.google.fr/*",
+    "*://*.google.es/*",
+    "*://*.google.it/*",
+    "*://*.google.ca/*",
+    "*://*.google.com.au/*",
+    "*://*.google.nl/*",
+    "*://*.google.pl/*",
+    "*://*.google.com.br/*",
+    "*://*.google.co.jp/*"
+  ]
+}
