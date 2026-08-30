@@ -16,23 +16,24 @@ A Firefox addon that adds a **Download button to Google Street View** and saves 
 
 ## Install
 
-**Temporary (any Firefox, until restart):**
+**Temporary (until restart):**
 
 1. Open `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on…** and pick `manifest.json` from this folder
 
-**Permanent:** regular Firefox only installs signed add-ons — either self-sign for free as an unlisted add-on on [addons.mozilla.org](https://addons.mozilla.org/developers/), or use Developer Edition / Nightly / ESR with `xpinstall.signatures.required = false` in `about:config` and install the zip from [Releases](./releases).
+**Permanent:**
+
+Regular Firefox only installs signed add-ons — either self-sign for free as an unlisted add-on on [addons.mozilla.org](https://addons.mozilla.org/developers/), or use Developer Edition / Nightly / ESR with `xpinstall.signatures.required = false` in `about:config` and install the zip from [Releases](./releases).
 
 ## Usage
 
 1. Open [Google Maps](https://www.google.com/maps) and drop into Street View
-2. Click the round ⬇ button next to Street View's controls (bottom-right) — or the toolbar icon
-3. The 360° photo lands in your Downloads folder; a toast confirms it
+2. Click the round ⬇ button next to Street View's controls (bottom-right) to download
 
 | | |
 |:---:|:---:|
 | ![Buttons](screenshots/ui_buttons.png) | ![Settings](screenshots/ui_settings.png) |
-| Download ⬇ and settings ⚙ buttons | Settings panel |
+| Download and settings buttons | Settings panel |
 
 ## Requirements
 
@@ -42,10 +43,6 @@ A Firefox addon that adds a **Download button to Google Street View** and saves 
 
 - Official Street View coverage only; user-contributed photo spheres are not supported.
 - Street View imagery is © Google — this tool is for personal use; respect Google's Terms of Service.
-
-## Credits
-
-Protocol details were reverse-engineered by others — see [sk-zk/streetlevel](https://github.com/sk-zk/streetlevel), [tgrcode's write-up](https://tgrcode.com/posts/reverse_engineering_google_streetview), [stiles/streetview-dl](https://github.com/stiles/streetview-dl) and the [Google StreetView Toolkit userscript](https://greasyfork.org/en/scripts/497741-google-streetview-toolkit-panorama-downloader). StreetFox is an independent implementation for Firefox.
 
 ## License
 
